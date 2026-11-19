@@ -16,4 +16,4 @@ Aplicação web interativa para gerenciamento de tarefas diárias, desenvolvida 
 ## Como Executar Localmente
 1. Clone este repositório:
    ```bash
-   git clone [\[https://github.com/nicole04a/organizae.git\](https://github.com/nicole04a/organizae.git)](https://nicole04a.github.io/organizae/)
+   git clone [https://github.com/nicole04a/organizae.git](https://github.com/nicole04a/organizae.git)
