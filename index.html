@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizaê | Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <header class="brand">
+        <h1>Organizaê</h1>
+        <p>Gerenciador de tarefas</p>
+      </header>
+
+      <section class="form-box">
+        <h2 class="section-title">Nova Tarefa</h2>
+        <form id="task-form" class="task-form">
+          <label for="task-input">Descrição</label>
+          <input
+            type="text"
+            id="task-input"
+            maxlength="120"
+            required
+          >
+
+          <label for="task-priority">Prioridade</label>
+          <select id="task-priority">
+            <option value="baixa">Baixa</option>
+            <option value="media" selected>Média</option>
+            <option value="alta">Alta</option>
+          </select>
+
+          <div class="form-buttons">
+            <button type="submit" id="submit-btn" class="btn btn-primary">Adicionar</button>
+            <button type="button" id="cancel-btn" class="btn btn-secondary" hidden>Cancelar</button>
+          </div>
+        </form>
+        <p id="feedback" class="feedback"></p>
+      </section>
+
+      <footer class="sidebar-footer">
+        <p>Organizaê &bull; HTML5, CSS3 e JS</p>
+      </footer>
+    </aside>
+
+    <main class="main-content">
+      <section class="top-bar">
+        <div class="counters">
+          <div class="counter-card">
+            <span class="counter-label">Total</span>
+            <strong id="count-total">0</strong>
+          </div>
+          <div class="counter-card pending">
+            <span class="counter-label">Pendentes</span>
+            <strong id="count-pending">0</strong>
+          </div>
+          <div class="counter-card completed">
+            <span class="counter-label">Concluídas</span>
+            <strong id="count-completed">0</strong>
+          </div>
+        </div>
+
+        <div class="filters">
+          <button type="button" class="filter-btn active" data-filter="todas">Todas</button>
+          <button type="button" class="filter-btn" data-filter="pendentes">Pendentes</button>
+          <button type="button" class="filter-btn" data-filter="concluidas">Concluídas</button>
+        </div>
+      </section>
+
+      <section class="tasks-section">
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-message" class="empty-message">Nenhuma tarefa encontrada neste filtro.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
